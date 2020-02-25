@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Service {
-
+    data
    constructor(private http: HttpClient) {
         this.getJSON().subscribe(data => {
-            console.log(data);
+            this.data = data;
         });
     }
 
